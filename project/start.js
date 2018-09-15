@@ -9,6 +9,21 @@ app.use(express.static(__dirname));
 app.set('views', __dirname + '/html');
 app.set('view engine', 'ejs');
 
+// Set up the app's routing (added as part of personal website directions)
+app.get('/', function(request, response) {
+  response.render('pages/index');
+});
+
+
+app.get('/about', function(request, response) {
+  response.render('pages/about');
+});
+
+
+app.get('/projects', function(request, response) {
+  response.render('pages/projects');
+});
+
 app.get('/', function(request, response) {
   response.render('pages/index');
 });
